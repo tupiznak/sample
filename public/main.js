@@ -7,6 +7,16 @@ function onSubmit(form){
     let result = request('/users', data);
     if (result === '0'){
         form.hidden=true;
+        helloWorld.innerHTML = hello(data.user);
     }
     console.log(data);
 };
+
+function hello(text) {
+    return 'Hi, '+text;
+
+}
+
+if(typeof  exports==='objects'){
+    exports.hello=hello;
+}
