@@ -10,7 +10,11 @@ app.use(technologger);
 
 app.post('/users', (req, res) => {
     console.log(req.body);
+<<<<<<< HEAD
     res.send('0');
+=======
+    res.send('100');
+>>>>>>> 360f02d9b755792ece82f5368db34ce591f93368
     // TODO: вернуть количество обращений
 });
 
