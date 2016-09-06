@@ -6,11 +6,18 @@ let app = express();
 app.use('/', express.static('public'));
 
 app.use(parser.json());
-//app.use(technologger);
 
+let count ={};
+
+//app.use(technologger);
 app.post('/users', (req, res) => {
-    console.log(req.body);
-    res.send('0');
+    if(count[req.body['email']]){
+        count[req.body['email']]++;
+    } else{
+        count[req.body['email']]=1;
+    };
+    //console.log(req.body);
+    res.send(count[req.body['email']].toString());
     // TODO: вернуть количество обращений
 });
 

@@ -5,10 +5,8 @@ function onSubmit(form){
         email: form.elements['email'].value
     };
     let result = request('/users', data);
-    if (result === '0'){
-        form.hidden=true;
-        helloWorld.innerHTML = hello(data.user);
-    }
+    //form.hidden=true;
+    helloWorld.innerHTML = hello(data.user)+", your email loggined "+ result + " times";
 };
 
 function hello(text) {
