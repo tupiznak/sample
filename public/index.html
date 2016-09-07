@@ -11,12 +11,11 @@
 <body>
 	<!-- Emmet -->
 	<h3 id="helloWorld">Привет, залогинься!</h3>
-	<form action="/users" method="post" onsubmit="onSubmit(this); return false;">
+	<form id="regForm" action="/users" method="post" onsubmit="onSubmit(this); return false;">
 		<input required placeholder="Ваш email" type="email"  name="email" value="" />
 		<input required placeholder="Ваше имя" type="text" name="user" value="" />
-		<button name="name">
-			Привет!
-		</button>
+		<button name="name">Привет!</button>
 	</form>
+	<button id="returnBackButton" onclick="onSubmitExit();" style="display:none">Я пошёл</button>
 </body>
 </html>

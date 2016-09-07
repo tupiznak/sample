@@ -16,9 +16,7 @@ app.post('/users', (req, res) => {
     } else{
         count[req.body['email']]=1;
     };
-    //console.log(req.body);
     res.send(count[req.body['email']].toString());
-    // TODO: вернуть количество обращений
 });
 
 app.listen(process.env.PORT || 3000, () => {
